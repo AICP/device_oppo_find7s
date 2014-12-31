@@ -22,6 +22,11 @@ TARGET_BOOTANIMATION_HALF_RES := true
 TARGET_SCREEN_HEIGHT := 2560
 TARGET_SCREEN_WIDTH := 1440
 
+# Ramdisk - fstab/init.qcom.rc is different for each variant
+PRODUCT_PACKAGES += \
+    fstab.qcom \
+    init.qcom.rc
+
 # Device uses high-density artwork where available
 PRODUCT_AAPT_CONFIG := normal hdpi xhdpi xxhdpi xxxhdpi
 PRODUCT_AAPT_PREF_CONFIG := xxxhdpi
